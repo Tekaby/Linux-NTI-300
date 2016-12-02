@@ -1,3 +1,9 @@
-#!/bin/bash
+#!/bin/python
+import os
 
-[ sudo yum clean all && sudo yum update kernel && sudo reboot ] || echo "FAILUREEEEEEEEEE"
+
+
+os.system('sudo yum clean all')
+os.system('sudo yum update kernel') 
+os.system('sudo reboot')
+

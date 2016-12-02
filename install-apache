@@ -1,13 +1,18 @@
-#!/bin/bash
+#!/bin/python
 
-echo "installing apache server"
-sudo yum -y install httpd
+import os
 
-echo "enabling apache server"
-sudo systemctl enable httpd.service
+def install_apache():
+    print("installing apache server")
+    os.system('sudo yum -y install httpd')
 
-echo "starting apache server"
-sudo systemctl start httpd.service
 
-echo "If you open the security settings for port 80 on your server, you should see the apache start page"
+    print("enabling apache server")
+    os.system('sudo systemctl enable httpd.service')
 
+    print("starting apache server")
+    os.system('sudo systemctl start httpd.service')
+
+
+    print("If you open the security settings for port 80 on your server, you should see the apache start page")
+install_apache()
